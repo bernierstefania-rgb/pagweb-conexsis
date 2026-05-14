@@ -592,9 +592,9 @@ function Pantalla3() {
         eyebrow="Hoja de Ruta · CREG · CNO · RETIE"
         title="Guía de Restablecimiento — TEBSA 220/110 kV"
         desc="Cuestionario operativo paso a paso basado en normatividad vigente. Chulée cada acción a medida que la ejecuta."
-        bgImage="/Imagen2.png"
+        bgImage="/Imagen3.png"
         overlayColor={OVERLAY_CRISP}
-        bgPosition="center 28%"
+        bgPosition="center 60%"
       >
         {!iniciado && (
           <button className="btn-iniciar" onClick={() => setIniciado(true)}>
