@@ -128,7 +128,9 @@ img { display: block; }
   background-size: cover;
   background-position: center 38%;
   background-repeat: no-repeat;
-  image-rendering: high-quality;
+  /* fuerza al navegador a usar el renderizador de mayor calidad */
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 /* Overlay (color pasado por prop inline) */

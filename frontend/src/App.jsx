@@ -373,12 +373,13 @@ function NavBar({ pantalla, setPantalla }) {
 }
 
 // ─── HERO SECTION ─────────────────────────────────────────────────────────────
-function HeroSection({ eyebrow, title, desc, bgImage, overlayColor, children }) {
+function HeroSection({ eyebrow, title, desc, bgImage, overlayColor, bgPosition, children }) {
+  const sectionStyle = {
+    ...(bgImage    ? { backgroundImage: `url('${bgImage}')` } : {}),
+    ...(bgPosition ? { backgroundPosition: bgPosition }       : {}),
+  };
   return (
-    <section
-      className="hero"
-      style={bgImage ? { backgroundImage: `url('${bgImage}')` } : {}}
-    >
+    <section className="hero" style={sectionStyle}>
       <div
         className="hero-overlay"
         style={overlayColor ? { background: overlayColor } : {}}
@@ -399,6 +400,9 @@ const OVERLAY_BLUE =
 
 const OVERLAY_DARK =
   "linear-gradient(90deg, rgba(10,15,80,0.92) 0%, rgba(10,15,80,0.80) 38%, rgba(10,15,80,0.50) 62%, rgba(10,15,80,0.12) 100%)";
+
+const OVERLAY_CRISP =
+  "linear-gradient(90deg, rgba(13,18,84,0.82) 0%, rgba(13,18,84,0.60) 32%, rgba(13,18,84,0.22) 58%, rgba(13,18,84,0.04) 100%)";
 
 // ─── PANTALLA 1 ───────────────────────────────────────────────────────────────
 function Pantalla1() {
@@ -582,7 +586,8 @@ function Pantalla3() {
         title="Guía de Restablecimiento — TEBSA 220/110 kV"
         desc="Cuestionario operativo paso a paso basado en normatividad vigente. Chulée cada acción a medida que la ejecuta."
         bgImage="/Imagen2.png"
-        overlayColor={OVERLAY_DARK}
+        overlayColor={OVERLAY_CRISP}
+        bgPosition="center 55%"
       >
         {!iniciado && (
           <button className="btn-iniciar" onClick={() => setIniciado(true)}>
