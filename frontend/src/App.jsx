@@ -373,9 +373,9 @@ function NavBar({ pantalla, setPantalla }) {
 }
 
 // ─── HERO SECTION ─────────────────────────────────────────────────────────────
-function HeroSection({ eyebrow, title, desc, bgImage, overlayColor, bgPosition, children }) {
+function HeroSection({ eyebrow, title, desc, bgImage, overlayColor, bgPosition, tall, children }) {
   return (
-    <section className="hero">
+    <section className={`hero${tall ? " hero--tall" : ""}`}>
       {bgImage && (
         <img
           src={bgImage}
@@ -594,7 +594,8 @@ function Pantalla3() {
         desc="Cuestionario operativo paso a paso basado en normatividad vigente. Chulée cada acción a medida que la ejecuta."
         bgImage="/ImagenTEBSA.png"
         overlayColor={OVERLAY_CRISP}
-        bgPosition="center 40%"
+        bgPosition="center 30%"
+        tall
       >
         {!iniciado && (
           <button className="btn-iniciar" onClick={() => setIniciado(true)}>

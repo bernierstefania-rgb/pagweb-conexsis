@@ -126,6 +126,9 @@ img { display: block; }
   overflow: hidden;
   background-color: var(--cnxs-navy-dk);
 }
+.hero--tall {
+  min-height: 540px;
+}
 
 /* Imagen real — máxima nitidez con object-fit */
 .hero-bg-img {
