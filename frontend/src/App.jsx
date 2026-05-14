@@ -383,6 +383,8 @@ function HeroSection({ eyebrow, title, desc, bgImage, overlayColor, bgPosition, 
           className="hero-bg-img"
           style={{ objectPosition: bgPosition || "center 38%" }}
           draggable={false}
+          loading="eager"
+          fetchPriority="high"
         />
       )}
       <div
@@ -592,7 +594,7 @@ function Pantalla3() {
         desc="Cuestionario operativo paso a paso basado en normatividad vigente. Chulée cada acción a medida que la ejecuta."
         bgImage="/Imagen2.png"
         overlayColor={OVERLAY_CRISP}
-        bgPosition="center 55%"
+        bgPosition="center 28%"
       >
         {!iniciado && (
           <button className="btn-iniciar" onClick={() => setIniciado(true)}>
