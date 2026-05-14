@@ -374,12 +374,17 @@ function NavBar({ pantalla, setPantalla }) {
 
 // ─── HERO SECTION ─────────────────────────────────────────────────────────────
 function HeroSection({ eyebrow, title, desc, bgImage, overlayColor, bgPosition, children }) {
-  const sectionStyle = {
-    ...(bgImage    ? { backgroundImage: `url('${bgImage}')` } : {}),
-    ...(bgPosition ? { backgroundPosition: bgPosition }       : {}),
-  };
   return (
-    <section className="hero" style={sectionStyle}>
+    <section className="hero">
+      {bgImage && (
+        <img
+          src={bgImage}
+          alt=""
+          className="hero-bg-img"
+          style={{ objectPosition: bgPosition || "center 38%" }}
+          draggable={false}
+        />
+      )}
       <div
         className="hero-overlay"
         style={overlayColor ? { background: overlayColor } : {}}
