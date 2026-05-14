@@ -395,10 +395,10 @@ function HeroSection({ eyebrow, title, desc, bgImage, overlayColor, children }) 
 
 // Overlay azul royal de la marca (Banner azul_)
 const OVERLAY_BLUE =
-  "linear-gradient(90deg, rgba(31,40,176,0.93) 0%, rgba(31,40,176,0.82) 38%, rgba(31,40,176,0.55) 65%, rgba(20,28,140,0.20) 100%)";
+  "linear-gradient(90deg, rgba(31,40,176,0.88) 0%, rgba(31,40,176,0.72) 35%, rgba(31,40,176,0.38) 60%, rgba(20,28,140,0.08) 100%)";
 
 const OVERLAY_DARK =
-  "linear-gradient(90deg, rgba(10,15,80,0.96) 0%, rgba(10,15,80,0.88) 40%, rgba(10,15,80,0.60) 65%, rgba(10,15,80,0.20) 100%)";
+  "linear-gradient(90deg, rgba(10,15,80,0.92) 0%, rgba(10,15,80,0.80) 38%, rgba(10,15,80,0.50) 62%, rgba(10,15,80,0.12) 100%)";
 
 // ─── PANTALLA 1 ───────────────────────────────────────────────────────────────
 function Pantalla1() {

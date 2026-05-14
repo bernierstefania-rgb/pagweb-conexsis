@@ -120,14 +120,15 @@ img { display: block; }
 /* ── HERO ─────────────────────────────────────────────────────────────────── */
 .hero {
   position: relative;
-  min-height: 360px;
+  min-height: 420px;
   display: flex;
   align-items: center;
   overflow: hidden;
   background-color: var(--cnxs-navy-dk);
   background-size: cover;
-  background-position: center center;
+  background-position: center 38%;
   background-repeat: no-repeat;
+  image-rendering: high-quality;
 }
 
 /* Overlay (color pasado por prop inline) */
@@ -136,10 +137,10 @@ img { display: block; }
   inset: 0;
   /* fallback si no se pasa inline */
   background: linear-gradient(90deg,
-    rgba(31,40,176,0.93) 0%,
-    rgba(31,40,176,0.80) 38%,
-    rgba(31,40,176,0.50) 65%,
-    rgba(20,28,140,0.15) 100%
+    rgba(31,40,176,0.88) 0%,
+    rgba(31,40,176,0.72) 35%,
+    rgba(31,40,176,0.38) 60%,
+    rgba(20,28,140,0.08) 100%
   );
   pointer-events: none;
 }
