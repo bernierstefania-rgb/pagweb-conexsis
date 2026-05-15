@@ -173,7 +173,7 @@ const generalidades = {
     { num: "5", label: "Confirmación final del sistema" },
   ],
   claves: [
-    "Nunca maniobrar sin orden del CND",
+    "Nunca maniobrar sin Instrucción PREVIA del CND",
     "Energización paso a paso",
     "Confirmación en cada maniobra",
     "Comunicación permanente",
