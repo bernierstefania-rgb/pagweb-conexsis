@@ -104,10 +104,11 @@ const regulacion = {
         {
           icon: "⚠️",
           titulo: "Regla de oro: seguridad sobre rapidez",
+          tituloHighlight: true,
           items: [
-            "Ante cualquier duda, suspender la maniobra e informar al CND",
-            "Nunca energizar sin autorización del CND",
-            "Nunca energizar equipo sospechoso de falla",
+            { text: "Ante cualquier duda, suspender la maniobra e informar al CND", highlight: true },
+            { text: "Nunca energizar sin autorización del CND", highlight: true },
+            { text: "Nunca energizar equipo sospechoso de falla", highlight: true },
           ],
         },
         {
@@ -498,7 +499,7 @@ function Pantalla1() {
                         <div key={i} className="bloque-card">
                           <div className="bloque-head">
                             <span className="bloque-icon">{b.icon}</span>
-                            <h4 className="bloque-title">{b.titulo}</h4>
+                            <h4 className="bloque-title" style={b.tituloHighlight ? { color: "var(--cnxs-orange)" } : {}}>{b.titulo}</h4>
                           </div>
                           <ul className="bloque-list">
                             {b.items.map((item, j) => {
