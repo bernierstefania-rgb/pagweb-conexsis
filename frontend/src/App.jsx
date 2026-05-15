@@ -24,8 +24,8 @@ const regulacion = {
           titulo: "Transmisores y Generadores están obligados a:",
           items: [
             "Seguir las instrucciones del CND sin desviarse",
-            "Tener planes previamente definidos, aprobados, coordinados y actualizados",
-            "Garantizar disponibilidad de recursos (equipos, personal)",
+            { text: "Tener planes previamente definidos, aprobados, coordinados y actualizados", highlight: true },
+            { text: "Garantizar disponibilidad de recursos (equipos, personal)", highlight: true },
             "Coordinar maniobras bajo lineamientos del sistema",
           ],
         },
@@ -473,7 +473,11 @@ function Pantalla1() {
                             <h4 className="bloque-title">{b.titulo}</h4>
                           </div>
                           <ul className="bloque-list">
-                            {b.items.map((item, j) => <li key={j}>{item}</li>)}
+                            {b.items.map((item, j) => (
+                              <li key={j} style={item.highlight ? { color: "var(--cnxs-orange)", fontWeight: 700 } : {}}>
+                                {item.text ?? item}
+                              </li>
+                            ))}
                           </ul>
                         </div>
                       ))}
