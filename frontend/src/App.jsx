@@ -163,7 +163,7 @@ const generalidades = {
     "Confirmación de disponibilidad: transformadores, bahías trafo, bahías línea, bahías corte central, bahías generación y protecciones operativas",
     "Identificar punto de energización (línea 220 kV o 110 kV)",
     "Verificar fuente de arranque (black start o red viva cercana)",
-    "Comunicación permanente: CND — Centro de Control — Subestación",
+    { type: "steps", label: "Comunicación permanente:", pasos: ["CND", "Centro de Control", "Subestación"] },
   ],
   secuencia: [
     { num: "1", label: "Condiciones del sistema" },
@@ -604,7 +604,21 @@ function Pantalla2() {
               {generalidades.premisas.map((p, i) => (
                 <li key={i}>
                   <span className="premisa-num">{i + 1}</span>
-                  <span>{p}</span>
+                  {p?.type === "steps" ? (
+                    <div style={{ flex: 1 }}>
+                      {p.label && <span className="steps-label">{p.label}</span>}
+                      <ol className="inline-steps">
+                        {p.pasos.map((paso, k) => (
+                          <li key={k} className="inline-step">
+                            <span className="step-arrow">▶</span>
+                            <span>{paso}</span>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+                  ) : (
+                    <span>{p}</span>
+                  )}
                 </li>
               ))}
             </ol>
