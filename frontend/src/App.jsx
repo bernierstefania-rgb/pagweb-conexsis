@@ -53,7 +53,7 @@ const regulacion = {
     {
       id: "s2",
       badge: "Compilación CREG",
-      titulo: "Resolución Única del Sector Eléctrico",
+      titulo: "Compilación CREG y Circulares",
       descripcion:
         "Reitera para OR que, en contingencia, la coordinación del restablecimiento se ajusta a lo dispuesto en el numeral 5.4 del Código de Redes.",
       bloques: [],
@@ -120,6 +120,20 @@ const regulacion = {
           ],
         },
       ],
+    },
+    {
+      id: "s4",
+      badge: "Acuerdo CNO",
+      titulo: "Acuerdo CNO",
+      descripcion: "",
+      bloques: [],
+    },
+    {
+      id: "s5",
+      badge: "Guía CND",
+      titulo: "Guía de Restablecimiento CND",
+      descripcion: "",
+      bloques: [],
     },
   ],
 };
