@@ -386,6 +386,51 @@ img { display: block; }
   font-weight: 700;
 }
 
+/* Ítem de secuencia dentro de bloque-list */
+.bloque-steps-item {
+  padding-left: 0;
+  list-style: none;
+}
+.bloque-steps-item::before { display: none; }
+
+.steps-label {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--cnxs-navy);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.inline-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: 0;
+  list-style: none;
+}
+
+.inline-step {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(31,40,176,0.05);
+  border: 1px solid rgba(31,40,176,0.15);
+  border-left: 3px solid var(--cnxs-blue);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: var(--cnxs-navy);
+}
+
+.step-arrow {
+  color: var(--cnxs-blue);
+  font-size: 0.7rem;
+  flex-shrink: 0;
+}
+
 /* ── GENERALIDADES ────────────────────────────────────────────────────────── */
 .gen-objetivo {
   display: flex;

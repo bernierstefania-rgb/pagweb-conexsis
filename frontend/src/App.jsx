@@ -79,7 +79,7 @@ const regulacion = {
           titulo: "Protocolo de coordinación obligatoria",
           items: [
             "Canal oficial de comunicación con CND",
-            "Confirmación en doble vía: orden recibida → repetición → confirmación de ejecución",
+            { type: "steps", label: "Confirmación en doble vía:", pasos: ["Orden recibida", "Repetición de la orden", "Confirmación de ejecución"] },
             "Ejemplo: «Se confirma orden CND: energizar barra 220 kV desde línea XX»",
           ],
         },
@@ -501,11 +501,26 @@ function Pantalla1() {
                             <h4 className="bloque-title">{b.titulo}</h4>
                           </div>
                           <ul className="bloque-list">
-                            {b.items.map((item, j) => (
-                              <li key={j} style={item.highlight ? { color: "var(--cnxs-orange)", fontWeight: 700 } : {}}>
-                                {item.text ?? item}
-                              </li>
-                            ))}
+                            {b.items.map((item, j) => {
+                              if (item?.type === "steps") return (
+                                <li key={j} className="bloque-steps-item">
+                                  {item.label && <span className="steps-label">{item.label}</span>}
+                                  <ol className="inline-steps">
+                                    {item.pasos.map((p, k) => (
+                                      <li key={k} className="inline-step">
+                                        <span className="step-arrow">▶</span>
+                                        <span>{p}</span>
+                                      </li>
+                                    ))}
+                                  </ol>
+                                </li>
+                              );
+                              return (
+                                <li key={j} style={item.highlight ? { color: "var(--cnxs-orange)", fontWeight: 700 } : {}}>
+                                  {item.text ?? item}
+                                </li>
+                              );
+                            })}
                           </ul>
                         </div>
                       ))}
