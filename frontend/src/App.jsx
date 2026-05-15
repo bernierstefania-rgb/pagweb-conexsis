@@ -45,7 +45,7 @@ const regulacion = {
           items: [
             { text: "Comunicación continua y confiable entre CND, centros de control y subestaciones", highlight: true },
             { text: "La pérdida de comunicación puede detener maniobras", highlight: true },
-            "Planes previos obligatorios — energización gradual — cargas esenciales prioritarias",
+            { type: "steps", label: "Secuencia obligatoria:", pasos: ["Planes previos obligatorios", "Energización gradual", "Cargas esenciales prioritarias"] },
           ],
         },
       ],
