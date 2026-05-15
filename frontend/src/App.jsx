@@ -346,7 +346,7 @@ function NavBar({ pantalla, setPantalla }) {
   const tabs = [
     { id: 1, label: "Regulación" },
     { id: 2, label: "Generalidades" },
-    { id: 3, label: "Iniciar Restablecimiento CNXS" },
+    { id: 3, label: "Iniciar Restablecimiento CNXS", labelShort: "Iniciar" },
   ];
   return (
     <header className="navbar">
@@ -363,7 +363,12 @@ function NavBar({ pantalla, setPantalla }) {
               className={`nav-tab ${pantalla === t.id ? "active" : ""} ${t.id === 3 ? "nav-tab--cta" : ""}`}
               onClick={() => setPantalla(t.id)}
             >
-              {t.label}
+              {t.labelShort ? (
+                <>
+                  <span className="tab-label-full">{t.label}</span>
+                  <span className="tab-label-short">{t.labelShort}</span>
+                </>
+              ) : t.label}
             </button>
           ))}
         </nav>
@@ -492,7 +497,7 @@ function Pantalla2() {
         eyebrow="Subestación TEBSA 220/110 kV"
         title="Generalidades del Restablecimiento"
         desc="Premisas obligatorias, secuencia operativa típica y claves para el restablecimiento seguro y coordinado."
-        bgImage="/Imagen2.png"
+        bgImage="/ImagenPantalla2.png"
         overlayColor={OVERLAY_BLUE}
       >
         <div className="hero-stats">
@@ -592,9 +597,9 @@ function Pantalla3() {
         eyebrow="Hoja de Ruta · CREG · CNO · RETIE"
         title="Guía de Restablecimiento — TEBSA 220/110 kV"
         desc="Cuestionario operativo paso a paso basado en normatividad vigente. Chulée cada acción a medida que la ejecuta."
-        bgImage="/ImagenTEBSA.png"
+        bgImage="/ImagenPantalla3.png"
         overlayColor={OVERLAY_CRISP}
-        bgPosition="center 30%"
+        bgPosition="center 45%"
         tall
       >
         {!iniciado && (

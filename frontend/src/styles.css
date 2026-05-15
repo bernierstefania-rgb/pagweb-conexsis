@@ -893,12 +893,18 @@ img { display: block; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ── Label helpers para nav mobile ───────────────────────────────────────── */
+.tab-label-short { display: none; }
+
 /* ── RESPONSIVE ───────────────────────────────────────────────────────────── */
+
+/* Tablet grande */
 @media (max-width: 1100px) {
   .navbar-nav { gap: 2px; }
   .nav-tab    { padding: 7px 12px; font-size: 0.84rem; }
 }
 
+/* Tablet */
 @media (max-width: 900px) {
   .navbar-inner  { padding: 0 20px; height: 66px; }
   .navbar-logo   { height: 44px; }
@@ -912,15 +918,17 @@ img { display: block; }
   .col-obs       { display: none; }
 }
 
+/* Mobile */
 @media (max-width: 680px) {
   .navbar-inner  { padding: 0 14px; height: 58px; }
   .navbar-logo   { height: 36px; }
   .navbar-nav    { gap: 2px; }
   .nav-tab       { padding: 6px 9px; font-size: 0.78rem; }
   .nav-tab--cta  { padding: 6px 10px; }
-  .hero-stats    { gap: 20px; }
+  .hero          { min-height: 360px; }
+  .hero--tall    { min-height: 420px; }
+  .hero-stats    { gap: 20px; flex-wrap: wrap; }
   .stat-val      { font-size: 1.3rem; }
-  .hero-title    { font-size: 1.5rem; }
   .hero-content  { padding: 30px 18px 26px; }
   .content-wrap  { padding: 18px 14px 40px; }
   .accordion-trigger { padding: 14px 16px; }
@@ -937,4 +945,76 @@ img { display: block; }
   .footer-cols   { flex-direction: column; gap: 20px; }
   .footer-bottom { flex-direction: column; text-align: center; }
   .norm-chips    { flex-direction: column; }
+}
+
+/* Teléfonos pequeños (< 500 px) */
+@media (max-width: 500px) {
+  /* Navbar: logo arriba, tabs abajo en fila */
+  .navbar-inner {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px 12px 8px;
+    gap: 8px;
+  }
+  .navbar-logo { height: 32px; align-self: flex-start; }
+  .navbar-nav  { justify-content: stretch; gap: 4px; }
+  .nav-tab {
+    flex: 1;
+    text-align: center;
+    padding: 7px 4px;
+    font-size: 0.74rem;
+    white-space: nowrap;
+  }
+  .nav-tab--cta { padding: 7px 4px; }
+
+  /* Etiqueta corta en CTA */
+  .tab-label-full  { display: none; }
+  .tab-label-short { display: inline; }
+
+  /* Hero overlay uniforme en pantallas angostas */
+  .hero-overlay { background: rgba(13,18,84,0.68) !important; }
+  .hero         { min-height: 300px; }
+  .hero--tall   { min-height: 360px; }
+  .hero-content { padding: 22px 14px 20px; }
+  .hero-eyebrow { font-size: 0.68rem; letter-spacing: 0.12em; }
+  .hero-desc    { font-size: 0.9rem; }
+  .hero-stats   { gap: 12px; }
+  .stat-val     { font-size: 1.15rem; }
+  .stat-lab     { font-size: 0.72rem; }
+
+  /* Botón Iniciar */
+  .btn-iniciar  { padding: 12px 22px; font-size: 0.9rem; }
+
+  /* Contenido general */
+  .content-wrap { padding: 12px 10px 32px; gap: 14px; }
+  .gen-objetivo { flex-direction: column; gap: 12px; }
+  .gen-obj-icon { width: 42px; height: 42px; font-size: 1.1rem; }
+
+  /* Accordion */
+  .accordion-trigger { padding: 12px 14px; }
+  .accordion-body    { padding: 0 14px 14px; }
+  .acc-title         { font-size: 0.92rem; }
+
+  /* Tabla checklist: área táctil mínima 48 px */
+  .row-check    { min-height: 48px; padding: 12px; align-items: center; }
+  .custom-check { width: 24px; height: 24px; border-radius: 6px; }
+  .row-text     { font-size: 0.84rem; }
+  .row-input    { font-size: 0.82rem; }
+  .paso-titulo  { font-size: 0.86rem; }
+  .fase-titulo  { font-size: 0.88rem; }
+
+  /* Footer */
+  .footer-inner  { padding: 24px 14px 18px; gap: 20px; }
+  .footer-logo   { height: 44px; }
+  .footer-bottom { padding: 12px 14px; font-size: 0.74rem; }
+  .footer-cols h5 { font-size: 0.8rem; }
+  .footer-cols p  { font-size: 0.8rem; }
+
+  /* Normas chips */
+  .norm-chip { padding: 10px 12px; font-size: 0.84rem; }
+
+  /* Secuencia */
+  .secuencia-item { max-width: 100%; }
+  .seq-circle     { width: 44px; height: 44px; font-size: 1.1rem; }
 }
