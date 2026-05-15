@@ -453,7 +453,7 @@ function Pantalla1() {
       <HeroSection
         eyebrow="Marco Normativo · SIN"
         title="Regulación Aplicable al Restablecimiento del SIN"
-        desc="Normatividad vigente CREG y Código de Redes para agentes transmisores del Sistema Interconectado Nacional."
+        desc="Normatividad vigente CREG para agentes Transmisores del Sistema Interconectado Nacional."
         bgImage="/Imagen3.png"
         overlayColor={OVERLAY_BLUE}
       >
