@@ -8,7 +8,7 @@ const regulacion = {
       badge: "CREG 025 / 1995",
       titulo: "Código de Redes — Código de Operación",
       descripcion:
-        "Base regulatoria del restablecimiento. El numeral 5.4 establece que, ante un evento total o parcial del SIN, el CND y los CRD determinan las acciones de restablecimiento; ordena aislar barrajes o cargas sin tensión, mantener comunicación continua y reconectar carga con frecuencia manualmente regulada entre 59.8 Hz y 60.1 Hz.",
+        "Es la base regulatoria para el restablecimiento del SIN. El numeral 5.4 de la Resolución CREG 025 de 1995 establece que, ante eventos totales o parciales, el CND y los CRD coordinan las acciones de recuperación del sistema, incluyendo aislamiento de cargas sin tensión, comunicación permanente y reconexión gradual de carga manteniendo la frecuencia entre 59,8 Hz y 60,1 Hz.",
       bloques: [
         {
           icon: "⚡",
