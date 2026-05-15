@@ -431,7 +431,7 @@ function Pantalla1() {
         <div className="hero-stats">
           {[
             { val: "3",    lab: "Resoluciones CREG" },
-            { val: "5.4",  lab: "Numeral Código de Redes" },
+            { val: "5.4",  lab: "Consejo Nacional de Operación" },
             { val: "CND",  lab: "Ente coordinador" },
           ].map((s) => (
             <div key={s.lab} className="hero-stat">
