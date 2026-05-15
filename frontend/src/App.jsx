@@ -680,7 +680,7 @@ function Pantalla3() {
     <div className="pantalla">
       <HeroSection
         eyebrow="Hoja de Ruta · CREG · CNO · RETIE"
-        title="Guía de Restablecimiento — TEBSA 220/110 kV"
+        title={<>Guía de Restablecimiento — SUBESTACIÓN TEBSA 220/110 kV · <span className="hero-brand-tag">CONEXSIS TN</span></>}
         desc="Cuestionario operativo paso a paso basado en normatividad vigente. Chulée cada acción a medida que la ejecuta."
         bgImage="/ImagenPantalla3.png"
         overlayColor={OVERLAY_CRISP}
