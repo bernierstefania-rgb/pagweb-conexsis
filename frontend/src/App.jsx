@@ -132,8 +132,22 @@ const regulacion = {
       id: "s5",
       badge: "Guía CND",
       titulo: "Guía de Restablecimiento CND",
-      descripcion: "",
+      descripcion: "Documentos oficiales del CND para el restablecimiento del Sistema Interconectado Nacional. Disponibles para visualización en línea o descarga.",
       bloques: [],
+      docs: [
+        {
+          nombre: "Black Start — SIN",
+          subtitulo: "Procedimiento de arranque en negro del Sistema Interconectado Nacional",
+          archivo: "/BlackStart-SIN_FuenteCND.pdf",
+          icono: "⚡",
+        },
+        {
+          nombre: "Lineamientos de Restablecimiento — SIN",
+          subtitulo: "Lineamientos operativos para el restablecimiento del SIN",
+          archivo: "/Lineamientos-Restablecimiento_SIN_FuenteCND.pdf",
+          icono: "📋",
+        },
+      ],
     },
   ],
 };
@@ -493,6 +507,29 @@ function Pantalla1() {
                               </li>
                             ))}
                           </ul>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                  {sec.docs && (
+                    <div className="doc-grid">
+                      {sec.docs.map((doc, i) => (
+                        <div key={i} className="doc-card">
+                          <div className="doc-icon-wrap">
+                            <span className="doc-icon">{doc.icono}</span>
+                          </div>
+                          <div className="doc-info">
+                            <p className="doc-nombre">{doc.nombre}</p>
+                            <p className="doc-subtitulo">{doc.subtitulo}</p>
+                          </div>
+                          <div className="doc-actions">
+                            <a href={doc.archivo} target="_blank" rel="noopener noreferrer" className="btn-doc btn-doc--ver">
+                              👁 Ver
+                            </a>
+                            <a href={doc.archivo} download className="btn-doc btn-doc--dl">
+                              ⬇ Descargar
+                            </a>
+                          </div>
                         </div>
                       ))}
                     </div>
