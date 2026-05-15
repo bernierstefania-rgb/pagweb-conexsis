@@ -156,7 +156,7 @@ const regulacion = {
 // ─── DATA PANTALLA 2 ──────────────────────────────────────────────────────────
 const generalidades = {
   objetivo:
-    "Restablecer la subestación 220/110 kV de forma segura, coordinada y progresiva, evitando sobrecargas, energizaciones en falla y descoordinación.",
+    "Restablecer la Subestación TEBSA 220/110 kV de forma segura, coordinada y progresiva, evitando sobrecargas, energizaciones en falla y descoordinación; y todas las representadas y de propiedad de CONEXSIS.",
   premisas: [
     "Todas las maniobras bajo instrucción del CND",
     "Verificar condición del sistema (total o parcial)",
@@ -566,7 +566,7 @@ function Pantalla2() {
     <div className="pantalla">
       <HeroSection
         eyebrow="Subestación TEBSA 220/110 kV"
-        title="Generalidades del Restablecimiento"
+        title="Generalidades del Restablecimiento del SIN"
         desc="Premisas obligatorias, secuencia operativa típica y claves para el restablecimiento seguro y coordinado."
         bgImage="/ImagenPantalla2.png"
         overlayColor={OVERLAY_BLUE}
