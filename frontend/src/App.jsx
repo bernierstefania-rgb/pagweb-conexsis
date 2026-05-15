@@ -43,8 +43,8 @@ const regulacion = {
           icon: "📡",
           titulo: "Coordinación y comunicación permanente",
           items: [
-            "Comunicación continua y confiable entre CND, centros de control y subestaciones",
-            "La pérdida de comunicación puede detener maniobras",
+            { text: "Comunicación continua y confiable entre CND, centros de control y subestaciones", highlight: true },
+            { text: "La pérdida de comunicación puede detener maniobras", highlight: true },
             "Planes previos obligatorios — energización gradual — cargas esenciales prioritarias",
           ],
         },
