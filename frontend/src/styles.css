@@ -335,6 +335,7 @@ img { display: block; }
   background: rgba(31,40,176,0.04);
   border-left: 3px solid var(--cnxs-blue);
   border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  text-align: justify;
 }
 
 .bloques-grid {
@@ -374,6 +375,7 @@ img { display: block; }
   line-height: 1.55;
   padding-left: 14px;
   position: relative;
+  text-align: justify;
 }
 
 .bloque-list li::before {
@@ -423,6 +425,7 @@ img { display: block; }
   line-height: 1.72;
   color: var(--gray-700);
   margin-top: 4px;
+  text-align: justify;
 }
 
 .gen-two-col {
@@ -469,6 +472,7 @@ img { display: block; }
   font-size: 0.9rem;
   color: var(--gray-700);
   line-height: 1.55;
+  text-align: justify;
 }
 
 .premisa-num {
@@ -495,6 +499,7 @@ img { display: block; }
   border-radius: var(--radius-sm);
   font-size: 0.9rem;
   color: var(--gray-900);
+  text-align: justify;
 }
 
 .clave-alert {
@@ -788,6 +793,7 @@ img { display: block; }
   font-size: 0.87rem;
   color: var(--gray-700);
   line-height: 1.55;
+  text-align: justify;
 }
 
 .table-row.done .row-text {
@@ -872,7 +878,7 @@ img { display: block; }
   border-bottom: 1px solid rgba(255,255,255,0.12);
 }
 
-.footer-cols p { font-size: 0.84rem; line-height: 1.6; }
+.footer-cols p { font-size: 0.84rem; line-height: 1.6; text-align: justify; }
 
 .footer-bottom {
   max-width: 1280px;
