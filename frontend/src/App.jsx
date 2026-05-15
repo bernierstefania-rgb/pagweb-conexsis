@@ -52,14 +52,6 @@ const regulacion = {
     },
     {
       id: "s2",
-      badge: "Compilación CREG",
-      titulo: "Compilación CREG y Circulares",
-      descripcion:
-        "Reitera para OR que, en contingencia, la coordinación del restablecimiento se ajusta a lo dispuesto en el numeral 5.4 del Código de Redes.",
-      bloques: [],
-    },
-    {
-      id: "s3",
       badge: "CREG 080 / 1999",
       titulo: "Funciones de coordinación operativa CND — Agentes SIN",
       descripcion:
@@ -121,6 +113,14 @@ const regulacion = {
           ],
         },
       ],
+    },
+    {
+      id: "s3",
+      badge: "Compilación CREG",
+      titulo: "Compilación CREG y Circulares",
+      descripcion:
+        "Reitera para OR que, en contingencia, la coordinación del restablecimiento se ajusta a lo dispuesto en el numeral 5.4 del Código de Redes.",
+      bloques: [],
     },
     {
       id: "s4",
