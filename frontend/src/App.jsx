@@ -430,9 +430,9 @@ function Pantalla1() {
       >
         <div className="hero-stats">
           {[
-            { val: "Resoluciones CREG",           lab: "" },
-            { val: "Consejo Nac. de Operación",   lab: "" },
-            { val: "CND",                          lab: "Ente coordinador" },
+            { val: "CREG", lab: "Resoluciones / Circulares" },
+            { val: "CNO",  lab: "Consejo Nacional de Operación" },
+            { val: "CND",  lab: "Operador del SIN" },
           ].map((s) => (
             <div key={s.lab} className="hero-stat">
               <span className="stat-val">{s.val}</span>

@@ -207,10 +207,10 @@ img { display: block; }
 
 .stat-val {
   font-family: "Space Grotesk", sans-serif;
-  font-size: clamp(0.85rem, 1.5vw, 1.7rem);
+  font-size: 1.7rem;
   font-weight: 700;
   color: #ffffff;
-  line-height: 1.2;
+  line-height: 1;
   text-shadow: 0 2px 8px rgba(0,0,0,0.25);
 }
 
