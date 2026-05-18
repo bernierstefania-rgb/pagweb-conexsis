@@ -203,7 +203,7 @@ const fases = [
         ],
       },
       {
-        id: "p0_2", titulo: "Paso 0.2 — Aseguramiento del personal (RETIE)",
+        id: "p0_2", titulo: "Paso 0.2 — Aseguramiento del personal (RETIE)", sinHora: true,
         items: [
           "Aplicar bloqueo y etiquetado (LOTO)",
           "Verificación de ausencia de tensión — tensiones de paso y contacto",
@@ -747,15 +747,16 @@ function Pantalla3() {
                 <div key={paso.id} className="paso-wrap">
                   <h4 className="paso-titulo">{paso.titulo}</h4>
                   <div className="paso-table">
-                    <div className="table-head">
+                    <div className="table-head" style={paso.sinHora ? { gridTemplateColumns: "1fr 210px" } : {}}>
                       <span>Acción</span>
-                      <span className="col-time">Hora</span>
+                      {!paso.sinHora && <span className="col-time">Hora</span>}
                       <span className="col-obs">Observaciones</span>
                     </div>
                     {paso.items.map((item, idx) => {
                       const key = `${paso.id}_${idx}`;
                       return (
-                        <div key={key} className={`table-row ${checks[key] ? "done" : ""}`}>
+                        <div key={key} className={`table-row ${checks[key] ? "done" : ""}`}
+                          style={paso.sinHora ? { gridTemplateColumns: "1fr 210px" } : {}}>
                           <label className="row-check">
                             <span
                               className={`custom-check ${checks[key] ? "checked" : ""}`}
@@ -765,9 +766,11 @@ function Pantalla3() {
                             </span>
                             <span className="row-text">{item}</span>
                           </label>
-                          <input type="text" className="row-input col-time" placeholder="HH:MM"
-                            value={tiempos[key] || ""}
-                            onChange={(e) => setTiempos((p) => ({ ...p, [key]: e.target.value }))} />
+                          {!paso.sinHora && (
+                            <input type="text" className="row-input col-time" placeholder="HH:MM"
+                              value={tiempos[key] || ""}
+                              onChange={(e) => setTiempos((p) => ({ ...p, [key]: e.target.value }))} />
+                          )}
                           <input type="text" className="row-input col-obs" placeholder="Observación..."
                             value={obs[key] || ""}
                             onChange={(e) => setObs((p) => ({ ...p, [key]: e.target.value }))} />
