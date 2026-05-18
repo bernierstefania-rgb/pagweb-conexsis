@@ -241,7 +241,7 @@ const fases = [
     titulo: "FASE 2 — Coordinación con el CND",
     pasos: [
       {
-        id: "p2_1", titulo: "Paso 2.1 — Establecer comunicación formal",
+        id: "p2_1", titulo: "Paso 2.1 — Establecer comunicación formal", sinHora: true,
         items: [
           "Canal operativo (SCADA / voz)",
           "Confirmar quién tiene control (CND)",
@@ -265,7 +265,7 @@ const fases = [
     titulo: "FASE 3 — Preparación para Energización",
     pasos: [
       {
-        id: "p3_1", titulo: "Paso 3.1 — Verificación técnica de equipos",
+        id: "p3_1", titulo: "Paso 3.1 — Verificación técnica de equipos", sinHora: true,
         items: [
           "Transformadores: nivel de aceite, protecciones habilitadas",
           "Interruptores: presión SF6 / estado mecánico",
@@ -275,7 +275,7 @@ const fases = [
         ],
       },
       {
-        id: "p3_2", titulo: "Paso 3.2 — Validación del Esquema de Control y Protecciones",
+        id: "p3_2", titulo: "Paso 3.2 — Validación del Esquema de Control y Protecciones", sinHora: true,
         items: [
           "Esquemas habilitados: diferenciales, distancia, sobrecorriente",
           "Esquemas de control y telecomando operativos",
@@ -303,7 +303,7 @@ const fases = [
         ],
       },
       {
-        id: "p4_2", titulo: "Paso 4.2 — Sincronización (si aplica — islas eléctricas)",
+        id: "p4_2", titulo: "Paso 4.2 — Sincronización (si aplica — islas eléctricas)", sinHora: true,
         items: [
           "Verificar frecuencia igual",
           "Verificar ángulo de fase",
@@ -317,14 +317,14 @@ const fases = [
     titulo: "FASE 5 — Restablecimiento de Carga",
     pasos: [
       {
-        id: "p5_1", titulo: "Paso 5.1 — Reconexión gradual de carga",
+        id: "p5_1", titulo: "Paso 5.1 — Reconexión gradual de carga", sinHora: true,
         items: [
           "Frecuencia entre 59.8 Hz – 60.1 Hz",
           "Secuencia: 1. Cargas críticas → 2. Cargas prioritarias → 3. Resto de demanda",
         ],
       },
       {
-        id: "p5_2", titulo: "Paso 5.2 — Control de estabilidad",
+        id: "p5_2", titulo: "Paso 5.2 — Control de estabilidad", sinHora: true,
         items: [
           "Monitorear: frecuencia, tensión, flujos de potencia",
           "Evitar: sobrecargas, caídas de tensión, oscilaciones",
