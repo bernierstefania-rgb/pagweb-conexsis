@@ -1009,6 +1009,46 @@ img { display: block; }
 .row-input.col-obs { border-right: none; }
 .row-input:focus { background: rgba(31,40,176,0.04); }
 
+/* ── BANNER DE ESTADO ────────────────────────────────────────────────────── */
+.status-banner {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: var(--radius-md);
+  border: 1.5px solid;
+  box-shadow: var(--shadow-md);
+  animation: fade-down 350ms ease;
+}
+
+.status-banner--ok {
+  background: linear-gradient(135deg, rgba(39,174,96,0.08), rgba(39,174,96,0.03));
+  border-color: rgba(39,174,96,0.45);
+}
+
+.status-banner--pending {
+  background: linear-gradient(135deg, rgba(224,120,32,0.08), rgba(224,120,32,0.03));
+  border-color: rgba(224,120,32,0.40);
+}
+
+.status-icon { font-size: 2rem; flex-shrink: 0; }
+
+.status-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.status-banner--ok   .status-title { color: #1a7a42; }
+.status-banner--pending .status-title { color: var(--cnxs-orange); }
+
+.status-desc {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--gray-700);
+}
+
 .reset-row { display: flex; justify-content: center; padding-top: 8px; }
 
 .btn-reset {

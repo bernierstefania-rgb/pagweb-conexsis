@@ -780,6 +780,25 @@ function Pantalla3() {
             </div>
           ))}
 
+          {/* Banner de estado */}
+          {pct === 100 ? (
+            <div className="status-banner status-banner--ok">
+              <span className="status-icon">✅</span>
+              <div>
+                <p className="status-title">¡Restablecimiento Exitoso!</p>
+                <p className="status-desc">Se completaron las {totalItems} acciones del protocolo. El sistema ha sido restablecido correctamente.</p>
+              </div>
+            </div>
+          ) : iniciado && doneItems > 0 ? (
+            <div className="status-banner status-banner--pending">
+              <span className="status-icon">⏳</span>
+              <div>
+                <p className="status-title">Restablecimiento Pendiente</p>
+                <p className="status-desc">{doneItems} de {totalItems} acciones completadas ({pct}%). Complete todas las acciones para finalizar el protocolo.</p>
+              </div>
+            </div>
+          ) : null}
+
           <div className="reset-row">
             <button className="btn-reset" onClick={() => {
               setIniciado(false);
